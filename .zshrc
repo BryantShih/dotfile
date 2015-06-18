@@ -7,6 +7,9 @@ export ZSH=/Users/haohsinshih/.oh-my-zsh
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# Using new version vim 7.4 instead of built-in vim 7.3
+alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -17,6 +20,19 @@ ZSH_THEME="agnoster"
 # Default User
 # Use it in .oh-my-zsh/themes/agnoster.zsh-theme to hile the "user@hostname"
 DEFAULT_USER="Bryantshih"
+
+# Set Vim as default editor
+export EDITOR="vim"
+bindkey -v
+
+# vi style incremental search
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
+
+# Auto cd
+setopt AUTO_CD
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
